@@ -1,0 +1,21 @@
+Question 1: hello/
+    - <on cluster node>
+    - $ make
+    - $ mpirun -n <processes> -ppn <processes_per_node> -f c1_hosts ./greetings
+
+Question 2: functiongen/
+    - $ make csvtostatic
+    - $ ./csvtostatic mydata.csv mydata.h
+    - $ make timeinterp
+    - $ ./timeinterp
+
+Question 3: approx/
+    - <on cluster node>
+    - $ make
+    - $ ./mpi_riemann <step_count>
+
+Question 4: mpi_interp
+    - <on cluster node
+    - $ make
+    - $ mpirun -n <processes> -ppn <processes_per_node> -f c1_hosts ./mpi_interp <step_count>
+

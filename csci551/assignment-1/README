@@ -1,0 +1,5 @@
+>make all: builds all 3 programs
+
+I tried to combine the three original Makefiles into one, but my makefile abilities are still a little tenuous
+As far as I can tell, the programs build and run just fine. In addition, compiling dc2 with -O3 caused it to run a full 10x faster
+Still, I am open to the possibility that I messed something up. Just good to keep in mind

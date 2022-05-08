@@ -1,0 +1,11 @@
+make: 
+    left_float left_double trap_float trap_double
+execute:
+    $ mpirun -n <number of processes> -ppn <processes per node> -f c1_hosts ./<executable name> <steps per second>
+example: 
+    $ mpirun -n 8 -ppn 1 -f c1_hosts ./left_double 10
+    '10' in the above example translates to a step size of 1/10: that is, input is steps per second, not step size
+
+VERBOSE flag is by default turned off. Turning it on will trigger a display of which processes are integrating which segments
+default output will display final position, difference from expected position, and final velocity
+code was adapted from linear interpolation in Exercise 3 - code will run for any number of processes that evenly divide 1800

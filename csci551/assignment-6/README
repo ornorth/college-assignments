@@ -1,0 +1,29 @@
+parent Directory houses code for questions 1 and 2
+sub-Directory 'q3' houses code for question 3
+sub-sub-Directory 'q3/csvConv' houses csv files for acceleration profiles and conversion code
+
+./make: newton falsi falsi2 omp_falsi2
+    newton and falsi have had negligible changes from the code given
+    falsi2 modifies falsi to attempt to find all roots within bounds
+        input (prompted): <lower_bound> <upper_bound> <interval> <precision> <max_iterations>
+        iteratively repeats the falsi code for x0 and x1 values within range(lower_bound, upper_bound, interval)
+        each unique root found gets inserted into a sorted list, and the list is printed at the end of the program
+    omp_falsi2 adds OpenMP parallelism to falsi2
+
+./q3/make: seqIntegrate ompIntegrate findIntersect findVIntersect
+    seqIntegrate integrates the given acceleration profiles and prints their final velocities and positions
+        input is <steps_per_second> (optional)
+    ompIntegrate adds OpenMP parallelism to seqIntegrate
+        input is <steps_per_second> (optional)
+    findIntersect integrates the given acceleration profiles and prints every instance where positions are equal within tolerance
+        input is <steps_per_second> <tolerance> (optional)
+        if you want to define tolerance, you also have to define steps_per_second
+    findVIntersect integates the given acceleration profiles and prints every instance where positions are equal within tolerance
+        whereas findIntersect prints the positions where they are within tolerance, findVIntersect prints the velocities where their positions are within tolerance
+        input is <steps_per_second> <tolerance> (optional)
+        if you want to define tolerance, you also have to define steps_per_second
+    *.h files are arrays representing acceleration profiles
+
+./q3/csvConv/make: csvtostatic
+    csvtostatic converts a specified .csv file with 1 column to a .h file containing an array with the csv data
+    *.csv files are taken from the given train profiles Excel sheet

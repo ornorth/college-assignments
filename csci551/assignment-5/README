@@ -1,0 +1,47 @@
+q1:
+  make: gewpp gsit
+    $ ./gewpp
+     Program reads from gauss.dat and performs row operations to solve the system of equations it represents
+    
+    $ ./gsit
+    $ enter tolerable error:
+    $ <entry>
+     Program has a system of equations built-in and will iterate until its solutions are within the tolerable error
+
+  None of this code was modified in any significant way. All I changed was the matrix in gauss.dat
+
+q2:
+  make: omp_pi mpi_pi #requires cluster node
+    $ ./omp_pi <number of iterations>
+     Program will iterate through both methods the specified number of times,
+     and will display time taken, values calculated, and the values' deviation from the expected value
+
+    $ mpiexec -n <number of processes> ./mpi_pi <number of iterations>
+     Program will iterate through both methods the specified number of times,
+     and will display time taken, values calculated, and the values' deviation from the expected value
+     I used mpiexec because the scope of the problem is so small that multiple nodes aren't necessary
+
+q3:
+  make: mat_mult omp_mult
+    $ ./mat_mult
+     Will use default matrix and vector specified in exercise prompt and print time and results
+    $ ./mat_mult <n>
+     Will generate 2 nxn matrices and an nx1 vector matrix to muliply together
+     Will print time but not the resulting matrices
+    $ ./mat_mult <n> <1 or 0>
+     Will generate 2 nxn matrices and an nx1 vector matrix to muliply together
+     Will print time and (if 1 is specified) will also print the resulting matrices
+     Use with caution on large values of n
+
+    $ ./omp_mult
+    $ ./omp_mult <n>
+    $ ./omp_mult <n> <1 or 0>
+     Behavior is the same as with mat_mult, but parallelized with OpenMP
+
+q4:
+  make: gewpp.c omp_gewpp.c
+    $ ./gewpp
+    $ ./omp_gewpp
+     Both programs read from gauss.dat and perform row operations to solve the system of equations
+     The only difference from the program in q1 is the addition of clock_gettime()
+     omp_gewpp is the same but parallelized with OpenMP

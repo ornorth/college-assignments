@@ -1,0 +1,27 @@
+1a: simplethread
+    > make
+    > ./pthread <n>
+
+1b: sumdigits
+    > make
+    > ./sumdigits
+
+1c: omp_sumdigits
+    > make
+    > ./omp_sumdigits
+
+2: erast_compare
+    > make
+    > ./pinum
+
+
+3: cardRotate
+    > make
+    > ./rotate
+
+matrotate.c and sharpen.c are not compiled. I kept them in as a reference for where I got code from.
+The program takes no input but assumes the existence of directory '/tmp/cards_3x4_pgm'.
+Images within that directory should follow the naming conventions of the given images.
+
+The program still does not work and I am not entirely sure why.
+I may revisit this code later and try to fix it.

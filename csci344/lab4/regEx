@@ -1,0 +1,50 @@
+sample regular expressions - checked by regexpal.com, make sure to select multiline instead of global
+
+1: email addresses (gmail only, no numbers allowed)
+  ^[a-zA-Z]*@gmail.com$
+
+2: Telephone numbers in any of the following formats: (555)555-5555, 555-555-5555, or 555-5555
+  ^((\(\d{3}\))|(\d{3}\-))?\d{3}\-?\d{4}$
+
+3: Zip codes in either of the following formats: 55555 or 55555-5555
+  ^\d{5}(-\d{4})?$
+
+4: Visa numbers: start with 4, contain 13 or 16 digits
+  ^4((\d{12})|(\d{15}))$
+
+5: Mastercard numbers: start with 5, next is 1-5, 16 digits total
+  ^5[1-5]\d{14}$
+
+6: American Express numbers: start with 34 or 37, contain 15 digits
+  ^3[47]\d{13}$
+
+7: All repeating words which are space delimited ("the |house house| is red", NOT "hello to you to")
+  ((.)+) \1
+
+8: HTML text matching H1-H6 or h1-h6 tags
+  <([hH][1-6]>)(.)*<\/\1
+
+9: URLs beginning with http:// and ending with .html
+  http:\/\/(.)+.html
+
+10: Files with a .sh extension
+  ^[^.]*\.sh$
+
+11: Integers with no leading zeros
+  \b[1-9]+[0-9]*\b
+
+12: Even integers
+  \b[0-9]*[02468]+\b
+
+13: Integers having occurrences of the digit 2 before occurrences of the digit 9 
+  \b[0-8]*2\d*9+\d*\b
+
+14: Longest possible patterns of a’s and b’s having no 3 consecutive b’s
+  (a*b{1,2}a*)|(a*b{1,2}a+)|(a+)
+
+#not pretty, probably could clean it up, but I'm pretty sure it works
+15: Longest possible matching patterns of a’s and b’s having an odd number of a’s or an odd # of b’s
+  (^.*[^b]b(b{2})*[^b].*$)|(^.*[^a]a(a{2})*[^a].*$)
+
+16: Words containing foo or bar, but not both
+  ^(\S(?!foo))*bar(\S(?!foo))*$|^(\S(?!bar))*foo(\S(?!bar))*$

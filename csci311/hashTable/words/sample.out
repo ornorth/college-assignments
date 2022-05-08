@@ -1,0 +1,85 @@
+Test 1 - print empty table
+0:	
+1:	
+2:	
+3:	
+4:	
+5:	
+6:	
+7:	
+8:	
+9:	
+-------------------------------------------------------------
+Test 2 - processing input file
+0:	nnnnn, 
+1:	ooooo, 
+2:	ppppp, 
+3:	qqqqq, 
+4:	hello, happy, heath, harps, rrrrr, 
+5:	iiiii, sssss, 
+6:	jjjjj, ttttt, 
+7:	kkkkk, uuuuu, 
+8:	lllll, 
+9:	mmmmm, 
+-------------------------------------------------------------
+Test 3 - searching
+Passed - searching for valid item
+Passed - searching for valid item
+Passed - searching for valid item
+Passed - searching for invalid item
+-------------------------------------------------------------
+Test 4 - testing remove
+0:	nnnnn, 
+1:	ooooo, 
+2:	ppppp, 
+3:	qqqqq, 
+4:	hello, heath, harps, rrrrr, 
+5:	iiiii, sssss, 
+6:	jjjjj, ttttt, 
+7:	kkkkk, uuuuu, 
+8:	lllll, 
+9:	mmmmm, 
+
+0:	nnnnn, 
+1:	ooooo, 
+2:	ppppp, 
+3:	qqqqq, 
+4:	heath, rrrrr, 
+5:	iiiii, sssss, 
+6:	jjjjj, ttttt, 
+7:	kkkkk, uuuuu, 
+8:	lllll, 
+9:	mmmmm, 
+
+0:	nnnnn, 
+1:	ooooo, 
+2:	ppppp, 
+3:	qqqqq, 
+4:	rrrrr, 
+5:	iiiii, sssss, 
+6:	jjjjj, ttttt, 
+7:	kkkkk, uuuuu, 
+8:	lllll, 
+9:	mmmmm, 
+
+0:	nnnnn, 
+1:	
+2:	ppppp, 
+3:	qqqqq, 
+4:	
+5:	iiiii, sssss, 
+6:	jjjjj, ttttt, 
+7:	kkkkk, uuuuu, 
+8:	lllll, 
+9:	mmmmm, 
+-------------------------------------------------------------
+Test 5 - output to file
+
+
+-------------------------------------------------------------
+Test 6 - Stats
+Total Collisions = 7
+Longest List Ever = 5
+Average List Length Over Time = 1.367853565
+Load Factor = 1.1
+-------------------------------------------------------------

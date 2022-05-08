@@ -1,0 +1,17 @@
+insert 11 11
+insert 02 02
+insert 14 14
+insert 07 07
+insert 01 01
+insert 15 15
+insert 08 08
+insert 05 05
+print
+insert 04 04
+print
+find 14
+find 03
+find 02
+delete 07 07
+print
+

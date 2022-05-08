@@ -1,0 +1,30 @@
+
+**********INSERTION SORT**********
+
+Original Data
+
+Sorted by POPULATION
+CPU time: 19.5643 seconds on 41712 records
+
+Sorted by NAME
+CPU time: 48.0478 seconds on 41712 records
+
+**********MERGE SORT**********
+
+Original Data
+
+Sorted by POPULATION
+CPU time: 0.273173 seconds on 41712 records
+
+Sorted by NAME
+CPU time: 0.281231 seconds on 41712 records
+
+**********QUICK SORT**********
+
+Original Data
+
+Sorted by POPULATION
+CPU time: 0.0708421 seconds on 41712 records
+
+Sorted by NAME
+CPU time: 0.0923041 seconds on 41712 records
